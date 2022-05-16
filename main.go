@@ -30,6 +30,6 @@ func main() {
 	// router.GET("/hello/:name", Hello)
 
 	r := mux.NewRouter()
-	http.HandleFunc("/", handlerFunc)
+	r.HandleFunc("/", handlerFunc)
 	http.ListenAndServe(":5000", r)
 }
