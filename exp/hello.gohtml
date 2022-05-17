@@ -26,3 +26,9 @@
   var m = {{.Map}};
 </script>
 
+{{range .Slice}}
+  <b>Slice item!</b>
+  {{.}}
+{{end}}
+
+{{range .Slice}}{{.}}{{end}}
