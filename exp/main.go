@@ -7,6 +7,7 @@ import (
 
 type User struct {
 	Name string
+	Dog  string
 }
 
 func main() {
@@ -17,8 +18,15 @@ func main() {
 
 	data := User{
 		Name: "John Smith",
+		Dog:  "Rick",
+	}
+	err = t.Execute(os.Stdout, data)
+	if err != nil {
+		panic(err)
 	}
 
+	data.Name = "Roy Wei"
+	data.Dog = "Ricky"
 	err = t.Execute(os.Stdout, data)
 	if err != nil {
 		panic(err)
