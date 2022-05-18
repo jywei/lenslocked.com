@@ -39,8 +39,6 @@ func notFound(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-	homeView = NewView("views/home.gohtml")
-
 	var err error
 	homeTemplate, err = template.ParseFiles(
 		"views/home.gohtml",
