@@ -32,6 +32,7 @@ type View struct {
 // layoutFiles returns a slice of strings representing
 // the layout files used in our application.
 func layoutFiles() []string {
+	// files, err := filepath.Glob("views/layouts/*.gohtml")
 	files, err := filepath.Glob(LayoutDir + "*" + TemplateExt)
 	if err != nil {
 		panic(err)
